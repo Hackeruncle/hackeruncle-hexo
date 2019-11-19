@@ -59,7 +59,7 @@ Replace to your own repo, the name is the same as github user name!
 ```yml
 deploy:
   type: git
-  repository: https://github.com/<github user name>/<github user name>.github.io.git
+  repo: git@github.com:<git user name>/<git user name>.github.io.git
   branch: master
 ```
 
