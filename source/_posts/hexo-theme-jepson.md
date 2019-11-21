@@ -25,7 +25,12 @@ ruozedata官网 : [www.ruozedata.com](http://www.ruozedata.com/)
 
 Install Node.js  and Git
 
-```shell
+```
+#For window
+Node.js https://nodejs.org/dist/v12.13.0/node-v12.13.0-x64.msi
+Git https://github.com/git-for-windows/git/releases/download/v2.24.0.windows.2/Git-2.24.0.2-64-bit.exe
+
+
 #For Mac
 brew install node
 brew install git
@@ -122,20 +127,20 @@ async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
 
 ## Hexo Basics
 ---
-#### Push hexo file to github:
+### Push hexo file to github:
 ```bash
 git add .
 git commit -m 'init'
 git push -u origin master
 ```
 
-#### Push hexo blog html to local : 
+### Push hexo blog html to local : 
 ```bash
 hexo clean && hexo generate && hexo server
 ```
 open web: [http://localhost:4000](http://localhost:4000)
 
-#### Push hexo blog html to github :
+### Push hexo blog html to github :
 ```bash
 hexo clean && hexo deploy
 ```
