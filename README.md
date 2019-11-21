@@ -104,7 +104,7 @@ async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
 
 ## Hexo Basics
 ---
-Some hexo command:
+#### Some hexo command:
 ```bash
 hexo new post "<post name>" # you can change post to another layout if you want
 hexo clean && hexo generate # generate the static file
@@ -112,20 +112,20 @@ hexo server # run hexo in local environment
 hexo deploy # hexo will push the static files automatically into the specific branch(gh-pages) of your repo!
 ```
 
-Push hexo file to github:
+#### Push hexo file to github:
 ```bash
 git add .
 git commit -m 'init'
 git push -u origin master
 ```
 
-Push hexo blog html to local : 
+#### Push hexo blog html to local : 
 ```bash
 hexo clean && hexo g && hexo s
 ```
 open web: [http://localhost:4000](http://localhost:4000)
 
-Push hexo blog html to github :
+#### Push hexo blog html to github :
 ```bash
 hexo clean && hexo deploy
 ```
