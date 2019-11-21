@@ -112,11 +112,21 @@ hexo server # run hexo in local environment
 hexo deploy # hexo will push the static files automatically into the specific branch(gh-pages) of your repo!
 ```
 
-# Have fun ^_^ 
----
-<!-- Place this tag in your head or just before your close body tag. -->
-<script async defer src="https://buttons.github.io/buttons.js"></script>
-<!-- Place this tag where you want the button to render. -->
+Push hexo file to github:
+```bash
+git add .
+git commit -m 'init'
+git push -u origin master
+```
 
-Please <a class="github-button" href="https://github.com/hackeruncle/hackeruncle-hexo" data-icon="octicon-star" aria-label="Star Jepson/hackeruncle-hexo on GitHub">Star</a> this Project if you like it! <a class="github-button" href="https://github.com/hackeruncle" aria-label="Follow @Jepson on GitHub">Follow</a> would also be appreciated!
-Peace!
+Push hexo blog html to local : 
+```bash
+hexo clean && hexo g && hexo s
+```
+open web: [http://localhost:4000](http://localhost:4000)
+
+Push hexo blog html to github :
+```bash
+hexo clean && hexo deploy
+```
+open web: [https://hackeruncle.github.io](https://hackeruncle.github.io)
