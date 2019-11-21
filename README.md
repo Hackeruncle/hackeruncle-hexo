@@ -1,16 +1,117 @@
-### 欢迎来到若泽数据，感谢大家对我们的支持.
---------------------------------------------------------------------
+# Install Hexo
 
-#### Join us if you have a dream. 
+Install Node.js  and Git
 
-* 若泽数据官网[http://ruozedata.com](http://ruozedata.com)      
-* 腾讯课堂(直播课)，搜若泽数据 [http://ruoze.ke.qq.com](http://ruoze.ke.qq.com)
-* Bilibili网站(视频),搜若泽数据 [https://space.bilibili.com/356836323](https://space.bilibili.com/356836323)
+```shell
+#For Mac
+brew install node
+brew install git
+```
 
-* [若泽大数据--官方博客(当前)](https://ruozedata.github.io)
-* [若泽大数据--博客一览(早期)](https://github.com/ruozedata/BigData/blob/master/blog/BigDataBlogOverview.md)
-* [若泽大数据--内部学员面试题](https://github.com/ruozedata/BigData/blob/master/interview/%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E9%A2%98.md)  
+Install hexo
 
-### 扫一扫，学一学:
- ![image](https://github.com/Hackeruncle/BigData/blob/master/blog/pic/%E8%8B%A5%E6%B3%BD%E6%95%B0%E6%8D%AE--%E6%89%AB%E6%8F%8F%E5%85%A5%E5%8F%A3.png?raw=true)  
-##### 有任何疑问的，QQ加课程顾问-星星: `1952249535`、或微信(`ruoze_star`)扫码，邀请进群与大佬交流。
+```shell
+npm install hexo-cli -g
+
+#For more:https://hexo.io/zh-cn/index.html
+```
+
+# Theme Usage
+
+## Init
+
+---
+```bash
+git clone https://github.com/hackeruncle/hackeruncle-hexo.git ./hackeruncle-hexo
+cd hackeruncle-hexo
+npm install
+```
+
+## Modify
+---
+Modify `_config.yml` file with your own info.
+Especially the section:
+### Deployment
+Replace to your own repo, the name is the same as github user name!
+```yml
+deploy:
+  type: git
+  repo: git@github.com:<git user name>/<git user name>.github.io.git
+  branch: master
+```
+
+### Sidebar settings
+Copy your avatar image to `<root>/img/` and modify the `_config.yml`:
+```yml
+sidebar: true    # whether or not using Sidebar.
+sidebar-about-description: "<your description>"
+sidebar-avatar: img/<your avatar path>
+```
+and activate your personal widget you like
+```yml
+widgets:         # here are widget you can use, you can comment out
+- featured-tags
+- short-about
+- recent-posts
+- friends-blog
+- archive
+- category
+```
+if you want to add sidebar widget, please add at `layout/_widget`.
+### Signature Setup
+Copy your signature image to `<root>/img/signature` and modify the `_config.yml`:
+```yml
+signature: true   # show signature
+signature-img: img/signature/<your-signature-ID>
+```
+### Go to top icon Setup
+My icon is using iron man, you can change to your own icon at `css/image`.
+
+### Post tag
+You can decide to show post tags or not.
+```yml
+home_posts_tag: true
+```
+
+### Markdown render
+My markdown render engine plugin is [hexo-renderer-markdown-it](https://github.com/celsomiranda/hexo-renderer-markdown-it).
+```yml
+# Markdown-it config
+## Docs: https://github.com/celsomiranda/hexo-renderer-markdown-it/wiki
+markdown:
+  render:
+    html: true
+    xhtmlOut: false
+    breaks: true
+    linkify: true
+    typographer: true
+    quotes: '“”‘’'
+```
+and if you want to change the header anchor 'ℬ', you can go to `layout/post.ejs` to change it.
+```javascript
+async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'hover',
+          placement: 'left',
+          icon: ℬ // this is the header anchor "unicode" icon
+        };
+```
+
+## Hexo Basics
+---
+Some hexo command:
+```bash
+hexo new post "<post name>" # you can change post to another layout if you want
+hexo clean && hexo generate # generate the static file
+hexo server # run hexo in local environment
+hexo deploy # hexo will push the static files automatically into the specific branch(gh-pages) of your repo!
+```
+
+# Have fun ^_^ 
+---
+<!-- Place this tag in your head or just before your close body tag. -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+<!-- Place this tag where you want the button to render. -->
+
+Please <a class="github-button" href="https://github.com/hackeruncle/hackeruncle-hexo" data-icon="octicon-star" aria-label="Star Jepson/hackeruncle-hexo on GitHub">Star</a> this Project if you like it! <a class="github-button" href="https://github.com/hackeruncle" aria-label="Follow @Jepson on GitHub">Follow</a> would also be appreciated!
+Peace!
