@@ -2,7 +2,12 @@
 
 Install Node.js  and Git
 
-```shell
+```
+#For window
+Node.js https://nodejs.org/dist/v12.13.0/node-v12.13.0-x64.msi
+Git https://github.com/git-for-windows/git/releases/download/v2.24.0.windows.2/Git-2.24.0.2-64-bit.exe
+
+
 #For Mac
 brew install node
 brew install git
